@@ -1,0 +1,21 @@
+name: Codex Code Review
+description: Run Codex review on a pull request via gersmann/codex-review-action
+
+inputs:
+  openai_api_key:
+    description: "OpenAI API key"
+    required: true
+  direct_prompt:
+    description: "Additional prompt instructions for Codex"
+    required: false
+    default: "Review this pull request for code quality, bugs, and best practices. Be concise."
+
+runs:
+  using: composite
+  steps:
+    - uses: p6m7g8-actions/checkout@main
+
+    - uses: gersmann/codex-review-action@main
+      with:
+        openai_api_key: ${{ inputs.openai_api_key }}
+        additional_prompt: ${{ inputs.direct_prompt }}
