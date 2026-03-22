@@ -15,7 +15,7 @@ runs:
   steps:
     - uses: p6m7g8-actions/checkout@main
 
-    - uses: gersmann/codex-review-action@main
+    - uses: gersmann/codex-review-action@v1.6.3
       with:
         openai_api_key: ${{ inputs.openai_api_key }}
         additional_prompt: ${{ inputs.direct_prompt }}
