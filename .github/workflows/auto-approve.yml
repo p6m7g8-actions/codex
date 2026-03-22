@@ -23,4 +23,3 @@ jobs:
         with:
           bot_token: ${{ secrets.P6_A_GH_TOKEN }}
           owner: pgollucci
-

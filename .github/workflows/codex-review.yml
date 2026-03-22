@@ -30,4 +30,3 @@ jobs:
         uses: p6m7g8-actions/codex@main
         with:
           openai_api_key: ${{ secrets.OPENAI_API_KEY }}
-
